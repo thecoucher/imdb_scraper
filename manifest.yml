@@ -1,0 +1,11 @@
+#--------------------------------------
+# change the `host` property to a
+# unique hostname on the domain you
+# are deploying to.
+#--------------------------------------
+
+applications:
+- name:    cf-movie-scraper
+  host:    cf-movie-scraper-pac
+  memory:  128M
+  command: npm start
