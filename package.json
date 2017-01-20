@@ -8,5 +8,9 @@
     "cheerio": "latest",
     "express": "^4.14.0",
     "request": "latest"
+  },
+  "repository": {
+  "type": "git",
+  "url": "git://github.com/thecoucher/imdb_scraper.git"
   }
 }
