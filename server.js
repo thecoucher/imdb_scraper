@@ -1,19 +1,16 @@
 var express = require('express');
-//var fs = require('fs');
 var cheerio = require('cheerio');
 var app     = express();
 var request = require('request');
 
 app.get('/scrape_movie', function(req, res){
 
-console.log('aaaaaaaaaaa');
 
     // The URL we will scrape from html returned from IMDB.
     url = 'http://www.imdb.com/title/tt0067756/'; // Silent Running
     //url = 'http://www.imdb.com/title/tt0062622/';  // 2001 A Space Odyddey
 
     request(url, function(error, response, html){
-console.log('bbbbbbbbbbbb');
         // Check for errors
         if(!error){
             
@@ -40,7 +37,7 @@ console.log('bbbbbbbbbbbb');
                 rating = data1.text();
                
                 json.rating = rating;
-				console.log('DEBUG: json: ' + JSON.stringify(json));
+				//console.log('DEBUG: json: ' + JSON.stringify(json));
             })
 
         }
